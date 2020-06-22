@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#003333">
+    android:background="#fff">
 
         <com.github.ybq.android.spinkit.SpinKitView
             android:id="@+id/progress_bar"
@@ -30,8 +30,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="@string/upcoming_movies"
+                android:fontFamily="@string/adventure"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="#fff" />
+                android:textColor="#000" />
 
             <android.support.v7.widget.RecyclerView
                 android:layout_margin="20dp"
@@ -46,8 +47,9 @@
 
             <TextView
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large.Inverse"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:text="@string/popular_movies"
+                android:fontFamily="@string/adventure"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

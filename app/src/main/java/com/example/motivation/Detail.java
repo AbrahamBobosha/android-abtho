@@ -30,8 +30,6 @@ public class Detail extends AppCompatActivity {
     TextView release_year,  plot;
     ImageView poster;
 
-    TextView director;
-    TextView writers;
 
     ProgressBar detail_progressbar;
     LinearLayout detail_info_layout;
@@ -90,8 +88,7 @@ public class Detail extends AppCompatActivity {
         showDetailProgress ( );
 
 
-        writers = findViewById (R.id.detail_writers);
-        director = findViewById (R.id.detail_director);
+
         release_year = findViewById (R.id.detail_year);
         poster = findViewById (R.id.detailed_movie_poster);
         plot = findViewById (R.id.detail_movie_plot);
@@ -105,21 +102,15 @@ public class Detail extends AppCompatActivity {
                 detailed_movie = response.body ( );
 
 
-                List<String> directors = new ArrayList<> ( );
-
                 release_year.setText (response.body ( ).getRelease_date ( ).substring (0, 4));
 
                 plot.setText (response.body ( ).getOverview ( ));
 
                 Glide.with (getApplicationContext ( )).load ("https://image.tmdb.org/t/p/w154" + response.body ( ).getImg_url ( )).into (poster);
 
-
-
                 setTitle (response.body ( ).getTitle ( ));
 
-                Log.d ("all writers", getFormattedList (directors));
 
-                writers.setText (getFormattedList (directors));
 
                 showDetailView ( );
 
