@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_margin="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/movie_poster"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+         />
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#003333"
+        android:padding="5dp"
+        android:text="Title"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/release_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#003333"
+        android:padding="5dp"
+        android:text="2020"
+        android:textColor="#fff" />
+
+
+</LinearLayout>
